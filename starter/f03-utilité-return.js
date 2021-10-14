@@ -20,11 +20,23 @@ Créez deux fonctions :
 	- stocke dans une variable resultat1 le résultat de 2 + 3 
 	- affiche dans la console "Dans calcule1 : resultat1 = " 
 	- retourne resultat1
-- une fonciton calcule2() qui 
+- une fonction calcule2() qui
 	- stocke dans une variable resultat2 le double de resultat1
 	- affiche dans la console "Dans calcule2 : resultat2 = " 
 Exécutez les deux fonctions
 */
 
 
+function calcul1(){
+    const resultat1 = 2+3;
+    console.log(`Dans calcule1 : resultat1 =${resultat1}`);
+    return resultat1;
+}
 
+function calcul2(iStart){
+    const resultat2 = iStart*2;
+    console.log(`Dans calcule2 : resultat2 =${resultat2}`);
+    return resultat2;
+}
+const iResultat1 = calcul1();
+console.log(calcul2(iResultat1));

@@ -48,15 +48,21 @@ EXERCICE :
 
 // 1°) Déclarer la fonction
 
+function direBonjour(){
+    console.log('Bonjour!');
+}
 
+
+//Rien ne s'affiche
 
 
 // 2°) Exécuter la fonction
 
+direBonjour()
 
 
+//Le Bonjour s'affiche'
 
 // 3°) Valeur de retour de cette fonction
-
-
-
+    const resultat = direBonjour();
+    console.log(resultat);
