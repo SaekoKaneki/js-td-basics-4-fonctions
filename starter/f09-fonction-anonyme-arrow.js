@@ -18,7 +18,11 @@
 - L'utiliser pour saluer Thomas dans la console
 */
 
-
+const salue =(prenom) =>{
+    const sHello =`Bonjour ${prenom}`;
+    return sHello
+}
+console.log(salue(`Thomas`));
 
 
 
@@ -34,4 +38,7 @@ N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions
 - Déclarer cette même fonction en utilisant la syntaxe simplifiée
 - L'utiliser pour saluer Thomas dans la console
 */
+const bonjour =(prenom) =>`Bonjour ${prenom}`;
 
+
+console.log(bonjour(`Thomas`));

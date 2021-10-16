@@ -7,7 +7,7 @@
 // 3. - 2°) Variable globale 
 
 /* 
-Variable gobale = variable déclarée en dehors d'une fonction
+Variable globale = variable déclarée en dehors d'une fonction
 Une variable globale est accessible de partout 
 => On peut voir une variable globale comme un
    2e MOYEN DE COMMUNCIATION entre les fonctions :
@@ -26,13 +26,20 @@ Une variable globale est accessible de partout
 4. Expliquer ce qui se passe
 */
 
+// function affiche1(){
+//     let iNbre1 = 2;
+// }
+// function affiche2(){
+//     let iNbre2 = 3;
+//     console.log(`Dans affiche2 : iNbre2 = ${iNbre2}`)
+//     console.log(`Dans affiche1 : iNbre1 = ${iNbre1}`)
+// }
+//
+// console.log(affiche2());
 
 
 
-
-
-
-
+//Le console.log de affiche1 ne s'affiche pas ainsi que sa valeur.
 
 
 
@@ -55,8 +62,19 @@ et elle n'est disponible qu'à l'intérieur de cette fonction
 5. Expliquer ce qui se passe
 */
 
-
-
+// let iNbre1 = 2;
+// function affiche1(){
+//     console.log(`Dans affiche1 : iNbre1 = ${iNbre1}`)
+//     return iNbre1;
+// }
+// function affiche2(){
+//     let iNbre2 = 3;
+//     console.log(`Dans affiche2 : iNbre2 = ${iNbre2}`);
+//     console.log(`Dans affiche1 : iNbre1 = ${iNbre1}`);
+//     return iNbre2;
+// }
+// console.log(affiche1());
+// console.log(affiche2());
 
 
 
@@ -90,10 +108,22 @@ On dit alors que c'est une variable "globale"
 5. Expliquer ce qui se passe
 */
 
+let iNbre1;
+function affiche1(){
+    iNbre1 = 2;
+    console.log(`Dans affiche1 : iNbre1 = ${iNbre1}`)
+    return iNbre1;
+}
 
+function affiche2(){
+    let iNbre2 = 3;
+    console.log(`Dans affiche2 : iNbre2 = ${iNbre1}`)
+    console.log(`Dans affiche1 : iNbre1 = ${iNbre1}`)
+    return iNbre2;
+}
 
-
-
+console.log(affiche1());
+console.log(affiche2());
 
 
 

@@ -20,11 +20,12 @@ donner l'ordre d'afficher dans la console le contenu de la variable message
 */
 
 
-
-
-
-
-
+// function direBonjour(){
+//     let sHello = 'Bonjour'
+//
+// }
+//
+// console.log(sHello);
 
 
 /* 
@@ -41,11 +42,11 @@ Ma variable message est une variable locale, je l'ai déclarée dans ma fonction
 	- donner l'ordre d'afficher dans la console le contenu de la variable message
 	- trouver le bon moyen pour afficher dans la console le contenu de la variable message
 */
-
-
-
-
-
+function direBonjour(){
+    let sHello = 'Bonjour'
+    return sHello;
+}
+console.log(direBonjour());
 
 /* 
 Ma variable message est une variable locale, je l'ai déclarée dans ma fonction direBonjour

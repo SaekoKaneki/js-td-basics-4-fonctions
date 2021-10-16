@@ -14,8 +14,10 @@
 - Exécuter la fonction
 */
 
-
-
+const direBonjour = function (){
+    console.log(`Bonjour`);
+}
+direBonjour();
 
 
 
@@ -27,7 +29,11 @@
 - L'utiliser pour afficher "Bonjour !" dans la console
 */
 
-
+const direBonjour = function (){
+    const sHello =`Bonjour`;
+    return sHello
+}
+console.log(direBonjour());
 
 
 
@@ -42,3 +48,8 @@
 - L'utiliser pour saluer Thomas dans la console
 */
 
+const salue =function(prenom){
+    const sHello =`Bonjour ${prenom}`;
+    return sHello
+}
+console.log(salue(`Thomas`));
