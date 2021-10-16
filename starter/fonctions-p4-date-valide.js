@@ -8,7 +8,25 @@ Ecrire un programme JS qui teste si une date entrée par l’utilisateur est une
 - Utilisez isValid pour décider si votre date est valide
 	avant d'afficher votre message dans la console
 */
+let iMaxdays = 31;
+let isBissextile2
+let sYear = parseInt(prompt('Veuillez rentre une année'));
+let sMonth = parseInt(prompt('Veuillez rentre une mois'));
+let sDays = parseInt(prompt('Veuillez rentre un jour'));
+function isBissextile(){
+    if ((sYear % 400 === 0) || (sYear%4 === 0 && sYear%100 !== 0)) {
+        isBissextile = true;
+    }else{
+        isBissextile = false;
+    }
+}
+function isValid(){
 
+}
+
+
+console.log(isBissextile())
+console.log(isValid())
 /*
 AIDE (en français) : 
 Pour qu’une date soit valide, il faut que la date du jour ne dépasse pas

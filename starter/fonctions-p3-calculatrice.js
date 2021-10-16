@@ -12,6 +12,27 @@ FONCTIONS - PRÉPA 3 : Une première calculatrice
 Aide : votre fonction s'exécute avec le pattern suivant : calculer(nb1, "+", nb2)
 */
 
+function calculer(nombre1,symbole, nombre2) {
+    switch (symbole){
+        case '+':
+            console.log(nombre1 + nombre2);
+            break;
+        case '-':
+            console.log(nombre1 - nombre2);
+            break;
+        case '*':
+        console.log(nombre1 * nombre2);
+            break;
+        case '/':
+        console.log(nombre1 / nombre2);
+            break;
+    }
+    return symbole;
+}
+console.log(calculer(4, '+', 6));
+console.log(calculer(4, '-', 6));
+console.log(calculer(2, '*', 0));
+console.log(calculer(12, '/',0));
 
 
 

@@ -9,16 +9,23 @@ Déclarer la fonction calculateAge qui prend le paramètre birthYear
 Cette fonction retourne l'âge de la personne
 en calculant l'année courante moins son année de naissance
 */
-
-
+const ibirthYear = parseInt(prompt('Veuillez rentrer votre année de naissance'));
+let currentYear= 2021;
+let age =currentYear-ibirthYear;
+function calculateAge(birthYear) {
+    console.log(`Vous avez ${age} ans`)
+     return age;
+}
 
 /* 
 Utiliser la fonction qu'on vient de créer pour calculer
-	- l'âge de John (né en 1990)
-	- l'âge de Mike (né en 1948)
-	- l'âge de Jane (née en 1969)
+	- l'âge de John (né en 1990) 31 ans
+	- l'âge de Mike (né en 1948) 73ans
+	- l'âge de Jane (née en 1969) 52 ans
 Afficher ces âges dans la console
 */
+console.log(calculateAge( `${age}`));
+
 
 
 
