@@ -9,11 +9,10 @@ Déclarer la fonction calculateAge qui prend le paramètre birthYear
 Cette fonction retourne l'âge de la personne
 en calculant l'année courante moins son année de naissance
 */
-const ibirthYear = parseInt(prompt('Veuillez rentrer votre année de naissance'));
 let icurrentYear= 2021;
-let iage =icurrentYear-ibirthYear;
 function calculateAge(prenom,birthYear) {
-    console.log(`Vous avez ${iage} ans`)
+    let iage = icurrentYear-birthYear;
+    console.log(`${prenom} a ${iage} ans`)
      return iage;
 }
 
@@ -24,7 +23,9 @@ Utiliser la fonction qu'on vient de créer pour calculer
 	- l'âge de Jane (née en 1969) 52 ans
 Afficher ces âges dans la console
 */
-console.log(calculateAge( 'John',`${iage}`));
+console.log(calculateAge( 'John',`1990`));
+console.log(calculateAge( 'Mike',`1948`));
+console.log(calculateAge( 'Jane',`1969`));
 
 
 
@@ -49,11 +50,11 @@ Utiliser ensuite la fonction pour calculer dans combien d'années seront pension
 	- Jane (née en 1969)
 */
 
+//let ipension = 65 -calculateAge( 'Jane',`1969`);
+//let ipension = 65 -calculateAge( 'Mike',`1948`);
+
 function giveYearsUntilRetirement(year,firstname){
-    //console.log(calculateAge());
-    let iCurrentyear = 2021;
-    let iage = iCurrentyear - year;
-    let ipension = 65 - iage;
+    let ipension = 65 -calculateAge( 'John',`1990`);
     if (ipension >=0){
         console.log(`${firstname} prendra sa pension dans ${ipension} ans`);
     }else{
@@ -65,4 +66,3 @@ function giveYearsUntilRetirement(year,firstname){
 console.log(giveYearsUntilRetirement(1990, 'John'));
 console.log(giveYearsUntilRetirement(1948, 'Mike'));
 console.log(giveYearsUntilRetirement(1969, 'Jane'));
-
