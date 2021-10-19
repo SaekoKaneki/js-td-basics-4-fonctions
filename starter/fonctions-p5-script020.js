@@ -10,11 +10,11 @@ Cette fonction retourne l'âge de la personne
 en calculant l'année courante moins son année de naissance
 */
 const ibirthYear = parseInt(prompt('Veuillez rentrer votre année de naissance'));
-let currentYear= 2021;
-let age =currentYear-ibirthYear;
-function calculateAge(birthYear) {
-    console.log(`Vous avez ${age} ans`)
-     return age;
+let icurrentYear= 2021;
+let iage =icurrentYear-ibirthYear;
+function calculateAge(prenom,birthYear) {
+    console.log(`Vous avez ${iage} ans`)
+     return iage;
 }
 
 /* 
@@ -24,7 +24,7 @@ Utiliser la fonction qu'on vient de créer pour calculer
 	- l'âge de Jane (née en 1969) 52 ans
 Afficher ces âges dans la console
 */
-console.log(calculateAge( `${age}`));
+console.log(calculateAge( 'John',`${iage}`));
 
 
 
@@ -43,12 +43,26 @@ Cette fonction
 	- calcule le nombre d'années qui restent jusque la pension (65 ans) et le stocke dans une variable retirement
 	- si ce nombre est positif, elle affiche "… prendra sa pension dans … ans",
 		sinon elle affiche "… est déjà pensionné(e)"
-Utiliser ensuite la fonction pour calculer dans cobien d'années seront pensionnés
+Utiliser ensuite la fonction pour calculer dans combien d'années seront pensionnés
 	- John (né en 1990)
 	- Mike (né en 1948)
 	- Jane (née en 1969)
 */
 
+function giveYearsUntilRetirement(year,firstname){
+    //console.log(calculateAge());
+    let iCurrentyear = 2021;
+    let iage = iCurrentyear - year;
+    let ipension = 65 - iage;
+    if (ipension >=0){
+        console.log(`${firstname} prendra sa pension dans ${ipension} ans`);
+    }else{
+        console.log(`${firstname} est déjà pensionné`);
+    }
+    return ipension;
+}
 
-
+console.log(giveYearsUntilRetirement(1990, 'John'));
+console.log(giveYearsUntilRetirement(1948, 'Mike'));
+console.log(giveYearsUntilRetirement(1969, 'Jane'));
 

@@ -8,25 +8,43 @@ Ecrire un programme JS qui teste si une date entrée par l’utilisateur est une
 - Utilisez isValid pour décider si votre date est valide
 	avant d'afficher votre message dans la console
 */
-let iMaxdays = 31;
-let isBissextile2
-let sYear = parseInt(prompt('Veuillez rentre une année'));
-let sMonth = parseInt(prompt('Veuillez rentre une mois'));
-let sDays = parseInt(prompt('Veuillez rentre un jour'));
+let iYear = parseInt(prompt("Veuillez rentrer une année"))
+let iMonth = parseInt(prompt("Veuillez rentrer un mois"))
+let iDays = parseInt(prompt("Veuillez rentrer un jour"))
 function isBissextile(){
-    if ((sYear % 400 === 0) || (sYear%4 === 0 && sYear%100 !== 0)) {
-        isBissextile = true;
+    if ((iYear % 400 === 0) || (iYear%4 === 0 && iYear%100 !== 0)) {
+        console.log(true);
     }else{
-        isBissextile = false;
+        console.log(false);
     }
-}
-function isValid(){
+    return ;
 
 }
+console.log(isBissextile());
+let iMaxdays = 31;
+const isValid = function (){
+    if (iMonth === 2) {
+        if (isBissextile = true) {
+            iMaxdays = 29;
+        }else{
+            iMaxdays = 28;
+        }
+    }else if (iMonth===4 || iMonth===6 || iMonth===9|| iMonth===11) {
+        iMaxdays = 30;
+    }
+    if (iMonth >= 12 && iMonth < 0) {
+        if (iDays <= iMaxdays) {
+            console.log(`le ${iDays} ${iMonth} ${iYear} est valide`);
+        }else{
+            console.log(`le ${iDays} ${iMonth} ${iYear} n\'est valide pas`);
+        }
+    }else{
+        console.log(`le ${iDays} ${iMonth} ${iYear} n\'est valide pas`);
+    }
+    return;
+}
 
-
-console.log(isBissextile())
-console.log(isValid())
+console.log(isValid());
 /*
 AIDE (en français) : 
 Pour qu’une date soit valide, il faut que la date du jour ne dépasse pas
