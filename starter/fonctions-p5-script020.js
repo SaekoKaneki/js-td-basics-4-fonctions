@@ -15,7 +15,6 @@ function calculateAge(prenom,birthYear) {
     console.log(`${prenom} a ${iage} ans`)
      return iage;
 }
-
 /* 
 Utiliser la fonction qu'on vient de créer pour calculer
 	- l'âge de John (né en 1990) 31 ans

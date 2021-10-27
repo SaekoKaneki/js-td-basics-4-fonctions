@@ -30,6 +30,7 @@ Par exemple,
  - Il ne reste plus ensuite qu'à comparer le jour entré par l'utilisateur avec maxJour
  	pour retourner true ou fasle selon que la date est valide ou pas.
 */
+
 const iJour = parseInt(prompt("Veuillez entrer un jour"));
 const iMois = parseInt(prompt("Veuillez entrer un mois"));
 const iAnnee = parseInt(prompt("Veuillez entrer une année"));
