@@ -8,43 +8,6 @@ Ecrire un programme JS qui teste si une date entrée par l’utilisateur est une
 - Utilisez isValid pour décider si votre date est valide
 	avant d'afficher votre message dans la console
 */
-let iYear = parseInt(prompt("Veuillez rentrer une année"))
-let iMonth = parseInt(prompt("Veuillez rentrer un mois"))
-let iDays = parseInt(prompt("Veuillez rentrer un jour"))
-function isBissextile(){
-    if ((iYear % 400 === 0) || (iYear%4 === 0 && iYear%100 !== 0)) {
-        console.log(true);
-    }else{
-        console.log(false);
-    }
-    return ;
-
-}
-console.log(isBissextile());
-let iMaxdays = 31;
-const isValid = function (){
-    if (iMonth === 2) {
-        if (isBissextile = true) {
-            iMaxdays = 29;
-        }else{
-            iMaxdays = 28;
-        }
-    }else if (iMonth===4 || iMonth===6 || iMonth===9|| iMonth===11) {
-        iMaxdays = 30;
-    }
-    if (iMonth >= 12 && iMonth < 0) {
-        if (iDays <= iMaxdays) {
-            console.log(`le ${iDays} ${iMonth} ${iYear} est valide`);
-        }else{
-            console.log(`le ${iDays} ${iMonth} ${iYear} n\'est valide pas`);
-        }
-    }else{
-        console.log(`le ${iDays} ${iMonth} ${iYear} n\'est valide pas`);
-    }
-    return;
-}
-
-console.log(isValid());
 /*
 AIDE (en français) : 
 Pour qu’une date soit valide, il faut que la date du jour ne dépasse pas
@@ -67,5 +30,38 @@ Par exemple,
  - Il ne reste plus ensuite qu'à comparer le jour entré par l'utilisateur avec maxJour
  	pour retourner true ou fasle selon que la date est valide ou pas.
 */
-
+const iJour = parseInt(prompt("Veuillez entrer un jour"));
+const iMois = parseInt(prompt("Veuillez entrer un mois"));
+const iAnnee = parseInt(prompt("Veuillez entrer une année"));
+const Bissextile = isBissextile();
+function isBissextile(){
+    if ((iAnnee % 400 === 0) || (iAnnee % 4 === 0 && iAnnee % 100 !== 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function isValid(Bissextile){
+    let iMaxJour = 31;
+    if (iMois === 2){
+        if (Bissextile){
+            iMaxJour = 29;
+        }else{
+            iMaxJour = 28;
+        }
+    }else if (iMois === 4 || iMois === 6 || iMois === 9 || iMois === 11){
+        iMaxJour = 30;
+    }
+    if (iMois <= 12 && iMois > 0){
+        if (iJour <= iMaxJour){
+            return true;
+        }else {
+            return false;
+        }
+    }else {
+        return false;
+    }
+}
+console.log(isValid(Bissextile))
+console.log(`${iJour} ${iMois} ${iAnnee}`);
 
