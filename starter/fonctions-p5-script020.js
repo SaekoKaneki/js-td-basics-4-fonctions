@@ -49,12 +49,8 @@ Utiliser ensuite la fonction pour calculer dans combien d'années seront pension
 	- Mike (né en 1948)
 	- Jane (née en 1969)
 */
-
-//let ipension = 65 -calculateAge( 'Jane',`1969`);
-//let ipension = 65 -calculateAge( 'Mike',`1948`);
-
 function giveYearsUntilRetirement(year,firstname){
-    let ipension = 65 -calculateAge( 'John',`1990`);
+    let ipension = 65 -calculateAge(`${firstname}`,`${year}`);
     if (ipension >=0){
         console.log(`${firstname} prendra sa pension dans ${ipension} ans`);
     }else{
