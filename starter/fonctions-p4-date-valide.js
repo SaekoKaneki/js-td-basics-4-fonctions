@@ -31,10 +31,7 @@ Par exemple,
  	pour retourner true ou fasle selon que la date est valide ou pas.
 */
 
-const iJour = parseInt(prompt("Veuillez entrer un jour"));
-const iMois = parseInt(prompt("Veuillez entrer un mois"));
-const iAnnee = parseInt(prompt("Veuillez entrer une année"));
-const Bissextile = isBissextile();
+
 function isBissextile(){
     if ((iAnnee % 400 === 0) || (iAnnee % 4 === 0 && iAnnee % 100 !== 0)) {
         return true;
@@ -63,6 +60,10 @@ function isValid(Bissextile){
         return false;
     }
 }
+const iJour = parseInt(prompt("Veuillez entrer un jour"));
+const iMois = parseInt(prompt("Veuillez entrer un mois"));
+const iAnnee = parseInt(prompt("Veuillez entrer une année"));
+const Bissextile = isBissextile();
 console.log(isValid(Bissextile))
 console.log(`${iJour} ${iMois} ${iAnnee}`);
 
