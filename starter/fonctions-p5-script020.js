@@ -22,15 +22,6 @@ Utiliser la fonction qu'on vient de créer pour calculer
 	- l'âge de Jane (née en 1969) 52 ans
 Afficher ces âges dans la console
 */
-console.log(calculateAge( 'John',`1990`));
-console.log(calculateAge( 'Mike',`1948`));
-console.log(calculateAge( 'Jane',`1969`));
-
-
-
-
-
-
 
 // 2. Fonction avec deux paramètres et un return
 
